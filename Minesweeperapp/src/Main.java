@@ -11,7 +11,7 @@ public class Main {
 		myFrame.add(myPanel);
 
 		MyMouseAdapter myMouseAdapter = new MyMouseAdapter();
-		myMouseAdapter.bombLocation();
+		myMouseAdapter.gameStart();
 		myFrame.addMouseListener(myMouseAdapter);
 
 		myFrame.setVisible(true);

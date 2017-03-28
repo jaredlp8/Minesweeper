@@ -32,4 +32,44 @@ public class Region {
 				System.out.println();
 		}
 	}
+		
+	public void closeNeighbors(int region[][]){
+		for(int coorX=1;coorX<=9;coorX++){
+			for(int coorY=1;coorY<=9;coorY++){
+				if(region[coorX][coorY] ==1){
+					if(region[coorX-1][coorY-1] == 1){ //top left
+						region[coorX-1][coorY-1] =1; 
+					}else region[coorX-1][coorY-1]=5; //change number
+					
+					if(region[coorX-1][coorY+1] ==1){ //top right 
+						region[coorX-1][coorY+1]=1; 
+					}else region[coorX-1][coorY+1]=5; 
+					
+					if(region[coorX][coorY-1]==1){//middle bottom 
+						region[coorX][coorY-1]=1;
+					}else region[coorX][coorY-1]=5;
+					}
+				if(region[coorX][coorY+1]==1){ //middle top 
+					region[coorX][coorY+1]=1; 
+				}else region[coorX][coorY+1]=5; 
+				
+				if(region[coorX+1][coorY-1] == 1){  //bottom left
+					region[coorX+1][coorY-1]=1;
+				}else region[coorX+1][coorY-1]=5; 
+				
+				if(region[coorX+1][coorY+1] ==1){ //bottom right 
+					region[coorX+1][coorY+1]=1;
+				}else region[coorX+1][coorY+1]=5; 
+				
+				if(region[coorX-1][coorY] == 1){ //middle left
+					region[coorX-1][coorY]=1;
+				}else region[coorX-1][coorY]=5; 
+				
+				if(region[coorX+1][coorY] ==1){ //middle right          
+					region[coorX+1][coorY]=1;
+				}else region[coorX+1][coorY]=5; 
+				
+				}
+			}
+		}
 }

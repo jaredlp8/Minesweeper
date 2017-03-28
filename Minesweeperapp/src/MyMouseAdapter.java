@@ -12,9 +12,10 @@ public class MyMouseAdapter extends MouseAdapter {
 	int region[][]=new int [11][11];
 	Region command = new Region(); 
 	
-	public void bombLocation(){
+	public void gameStart(){
 		command.bombGenerator(region);
 		command.bombViewer(region);
+		command.closeNeighbors(region);
 	}
 		
 	
